@@ -36,12 +36,12 @@ public class Main extends Thread{
                 System.arraycopy(arr, HALF, myArray2, 0, HALF);
 
                     Thread arr1Thred = new Thread(() -> {
-                        for (int i = 0; i < SIZE; i++) {
+                        for (int i = 0; i < HALF; i++) {
                             myArray1[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
                         }
                     });
                     Thread arr2Thred = new Thread(() -> {
-                        for (int i = 0; i < SIZE; i++) {
+                        for (int i = 0; i < HALF; i++) {
                             myArray2[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
                         }
                     });
